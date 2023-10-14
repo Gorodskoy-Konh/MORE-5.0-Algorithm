@@ -20,7 +20,7 @@ def bank_priority_sort_algorithm(banks: list[BankUnit], client: BankClient):
         if client.wait_time < bank.move_time:
             estimated_wait_time = bank.move_time
         else:
-            estimated_wait_time = client.wait_time - bank.move_time
+            estimated_wait_time = client.wait_time
         estimate_times.append((bank.bank_id, estimated_wait_time))
     
     estimate_times.sort(key=lambda x: x[1])
