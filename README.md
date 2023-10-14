@@ -30,7 +30,7 @@ terminal = BankTerminal(terminal_id, supported_services)
 from bank_algorithms.bank_client import BankClient
 from bank_algorithms.bank_queue import BankQueue
 
-# Список клиентов в порядке очереди (самый первый - первый)
+# Список клиентов в порядке очереди (самый первый - первый в очереди)
 clients = [
     BankClient("Кредиты"),
     BankClient("Ипотека"), # Объект клиента, для создания нужна услуга, которую он хочет
