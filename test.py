@@ -2,7 +2,7 @@ from bank_algorithms.bank_client import BankClient
 from bank_algorithms.bank_terminal import BankTerminal
 from bank_algorithms.bank_unit import BankUnit
 from bank_algorithms.bank_queue import BankQueue
-from bank_algorithms.bank_search_algorithm import bank_search_algorithm
+from bank_algorithms.bank_priority_sort_algorithm import bank_priority_sort_algorithm
 
 moi_mujik = BankClient("B")
 
@@ -45,4 +45,4 @@ terminals2 = [
 ]
 bank1 = BankUnit(0, queue1, terminals1, 1)
 bank2 = BankUnit(1, queue2, terminals2, 2)
-print(bank_search_algorithm([bank1, bank2], moi_mujik))
+print(bank_priority_sort_algorithm([bank1, bank2], moi_mujik))

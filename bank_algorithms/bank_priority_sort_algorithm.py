@@ -1,7 +1,16 @@
 from .bank_unit import BankUnit
 from .bank_client import BankClient
 
-def bank_search_algorithm(banks: list[BankUnit], client: BankClient):
+def bank_priority_sort_algorithm(banks: list[BankUnit], client: BankClient):
+    """
+    Sort list of banks according to estimated total waiting time.
+
+    Parameters:
+        banks (list[BankUnit]): List of banks for sorting according estimated wait time.
+
+    Returns:
+            binary_sum (str): Binary string of the sum of a and b
+    """
     estimate_times = []
     for bank in banks:
         bank.queue.clients.append(client)
