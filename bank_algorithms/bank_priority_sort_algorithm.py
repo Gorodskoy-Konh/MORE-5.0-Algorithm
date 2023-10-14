@@ -2,6 +2,8 @@ from datetime import time, timedelta
 from .bank_unit import BankUnit
 from .bank_client import BankClient
 
+__version__ = 'dev'
+
 def bank_priority_sort_algorithm(banks: list[BankUnit], client: BankClient, average_waiting_time: float):
     """
     Sort list of banks according to estimated total waiting time.
