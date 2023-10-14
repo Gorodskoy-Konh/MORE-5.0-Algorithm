@@ -68,5 +68,8 @@ print(best_bank_id, estimated_time) # Вывести ID лучшего банк�
 ```
 ### Вычисление времени ожидания для записи
 ```python
+from bank_algorithms.bank_priority_sort_algorithm import recorded_estimate_wait
 
+average_waiting_time = 360 # Общее среднее время, которое клиент проводит в банке
+print(recorded_estimate_wait(time(hour=5, minute=15), average_wait_time))
 ```
