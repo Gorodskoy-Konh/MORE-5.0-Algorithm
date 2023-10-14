@@ -7,9 +7,10 @@ def bank_priority_sort_algorithm(banks: list[BankUnit], client: BankClient):
 
     Parameters:
         banks (list[BankUnit]): List of banks for sorting according estimated wait time.
+        client (BankClient): Client for which we estimate waiting time.
 
     Returns:
-            binary_sum (str): Binary string of the sum of a and b
+        estimate_times (list[tuple[int, float]]): List of tuples where first element is 'bank_id' and second is estimated waiting time. 
     """
     estimate_times = []
     for bank in banks:

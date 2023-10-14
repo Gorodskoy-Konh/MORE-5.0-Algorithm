@@ -1,7 +1,18 @@
 from .bank_client import BankClient
 
 class BankQueue:
+    """
+    Queue of clients that are waiting for their services.
+    """
     def __init__(self, clients: list[BankClient]) -> None:
+        """
+        Create a bank queue object.
+
+        Parameters
+        ----------
+            clients: list[BankClient]
+                List of clients waiting in queue in order of queue (First in list is first in queue, last in list is last in queue).
+        """
         self.clients = clients
 
     def search_for_first(self, products: list[str]) -> int:

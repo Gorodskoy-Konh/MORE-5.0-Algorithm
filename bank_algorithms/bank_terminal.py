@@ -1,7 +1,21 @@
 from .bank_client import BankClient
 
 class BankTerminal:
+    """
+    Class that represents terminal in bank.
+    """
     def __init__(self, terminal_id : int, service_avg_times: dict[str, float]) -> None:
+        """
+        Create a bank terminal object.
+
+        Parameters
+        ----------
+            terminal_id: int
+                The id of a terminal.
+            service_avg_times: dict[str, float]
+                Dictionary where key is name of service and value is average execution time for this service.
+        """
+        
         self.supported_services = list(service_avg_times.keys())
         self.service_avg_times = service_avg_times
         self.terminal_id = terminal_id
