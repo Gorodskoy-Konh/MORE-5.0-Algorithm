@@ -9,7 +9,7 @@ class BankClient:
         Parameters
         ----------
             desired_product: str
-                Product that client wants.
+                Product that client wants. 
         """
         self.desired_product = desired_product
         self.wait_time = -1.0
