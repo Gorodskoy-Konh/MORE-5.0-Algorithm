@@ -46,7 +46,7 @@ from bank_algorithms.bank_unit import BankUnit
 terminals = [BankTerminal(...), BankTerminal(...), ...] # Список терминалов, создание описано выше
 queue = ... # Создание описано выше
 bank_id = 0 # ID банка
-move_time = 10000 # Время для того чтобы добравать пользователю до банка
+move_time = 10000 # Время затрачиваемое на дорогу до банка.
 bank = BankUnit(bank_id, queue, terminals, move_time)
 ```
 ### Использование алгоритма
