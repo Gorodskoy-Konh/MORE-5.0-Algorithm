@@ -1,8 +1,9 @@
+from datetime import time
 from bank_algorithms.bank_client import BankClient
 from bank_algorithms.bank_terminal import BankTerminal
 from bank_algorithms.bank_unit import BankUnit
 from bank_algorithms.bank_queue import BankQueue
-from bank_algorithms.bank_priority_sort_algorithm import bank_priority_sort_algorithm
+from bank_algorithms.bank_priority_sort_algorithm import bank_priority_sort_algorithm, recorded_estimate_wait
 
 moi_mujik = BankClient("B")
 
@@ -60,3 +61,4 @@ bank1 = BankUnit(0, queue1, terminals1, 1)
 bank2 = BankUnit(1, queue2, terminals2, 2)
 bank3 = BankUnit(2, queue3, terminals3, 1)
 print(bank_priority_sort_algorithm([bank1, bank2, bank3], moi_mujik, 0))
+print(recorded_estimate_wait(time(hour=5, minute=15), 360))
