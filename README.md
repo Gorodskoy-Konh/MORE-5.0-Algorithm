@@ -56,11 +56,17 @@ from bank_algorithms.bank_priority_sort_algorithm import bank_priority_sort_algo
 banks = [BankUnit(...), BankUnit(...), ...]
 user = BankClient("Ипотека") # Создание клиента банка на основе услуги которая нужна пользователю.
 
+average_waiting_time = 360 # Общее среднее время, которое клиент проводит в банке
+
 # Получаем список ID банков и оценочное время ожидания
-best_banks_estimated, best_banks_move = bank_priority_sort_algorithm(banks, user)
+best_banks_estimated, best_banks_move = bank_priority_sort_algorithm(banks, user, average_waiting_time)
 
 best_bank_id, estimated_time = best_banks_estimated[0]
 print(best_bank_id, estimated_time) # Вывести ID лучшего банка и лучшее время ожидания.
 
 # Тоже самое и для 'best_bank_move', но отсортированно только по времени дороги до банка!!!
+```
+### Вычисление времени ожидания для записи
+```python
+
 ```
