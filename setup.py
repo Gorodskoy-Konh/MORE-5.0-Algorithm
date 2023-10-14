@@ -9,6 +9,7 @@ setup(
     url='https://github.com/Gorodskoy-Konh/MORE-5.0-Algorithm',
     author='Nagim Isyanbaev',
     author_email='n.isyanbaev@innopol.university',
+    packages=["bank_algorithms"],
 
     py_modules=['bank_algorithms'],
 )
