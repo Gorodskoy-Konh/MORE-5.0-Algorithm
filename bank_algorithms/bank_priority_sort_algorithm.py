@@ -29,6 +29,16 @@ def bank_priority_sort_algorithm(banks: list[BankUnit], client: BankClient, aver
     return estimate_times
 
 def recorded_estimate_wait(record_time: time, averate_wait_time: float) -> time:
+    """
+    Add estimated time for a specific recording
+
+    Parameters:
+        record_time (datatime.time): Time of record.
+        average_waiting_time (float): Average waiting time in queue in current time.
+
+    Returns:
+        estimate_time (float): Time user has to wait. 
+    """
     record_timedelta = timedelta(hours=record_time.hour, minutes=record_time.minute, seconds=record_time.second)
     estimated_wait = averate_wait_time + record_timedelta.seconds
     return estimated_wait
