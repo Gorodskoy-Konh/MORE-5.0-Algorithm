@@ -1,13 +1,14 @@
 from .bank_unit import BankUnit
 from .bank_client import BankClient
 
-def bank_priority_sort_algorithm(banks: list[BankUnit], client: BankClient):
+def bank_priority_sort_algorithm(banks: list[BankUnit], client: BankClient, average_waiting_time: float):
     """
     Sort list of banks according to estimated total waiting time.
 
     Parameters:
         banks (list[BankUnit]): List of banks for sorting according estimated wait time.
         client (BankClient): Client for which we estimate waiting time.
+        average_waiting_time (float): Average waiting time in queue in current time.
 
     Returns:
         estimate_times (list[tuple[int, float]]): List of tuples where first element is 'bank_id' and second is estimated waiting time. 
@@ -18,7 +19,7 @@ def bank_priority_sort_algorithm(banks: list[BankUnit], client: BankClient):
         bank.simulate_queue()
         
         if client.wait_time < bank.move_time:
-            estimated_wait_time = bank.move_time
+            estimated_wait_time = bank.move_time + average_waiting_time
         else:
             estimated_wait_time = client.wait_time - bank.move_time
         estimate_times.append((bank.bank_id, estimated_wait_time))
