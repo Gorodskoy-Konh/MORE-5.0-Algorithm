@@ -22,7 +22,7 @@ supported_services = {
 terminal_id = 0
 
 
-termanal = BankTerminal(terminal_id, supported_services)
+terminal = BankTerminal(terminal_id, supported_services)
 ```
 
 #### Создание очереди клиентов
